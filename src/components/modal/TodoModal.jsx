@@ -15,6 +15,7 @@ const TodoModal = ({ onCloseModal, id, addTodoItem, edit, item, show }) => {
       setTitle(item.title);
       setSelected(item.priority === "normal" ? "Medium" : item.priority);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleAddTodoItem = () => {

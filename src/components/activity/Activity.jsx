@@ -10,7 +10,7 @@ const Activity = () => {
   const [showModal, setShowModal] = useState(false);
   const [cardItemIndex, setCardItemIndex] = useState(null);
   const [showAlert, setShowAlert] = useState(false);
-  const { activities, getActivities, addActivity, loading, deleteActivity } =
+  const { activities, getActivities, addActivity, deleteActivity } =
     useActivities();
   useEffect(() => {
     getActivities();

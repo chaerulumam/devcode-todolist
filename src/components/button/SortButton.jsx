@@ -9,7 +9,7 @@ const SortButton = ({ groupId, item, setTodoItem }) => {
 
   useEffect(() => {
     if (item) setTodoItem(sortTodo(selected, item));
-  }, [selected]);
+  });
 
   const handleActive = () => {
     setIsActive((prevState) => !prevState);
@@ -21,7 +21,12 @@ const SortButton = ({ groupId, item, setTodoItem }) => {
         onClick={handleActive}
         data-cy="todo-sort-button"
       ></span>
-      <SortDropdown selected={selected} setSelected={setSelected} setIsActive={setIsActive} isActive={isActive} />
+      <SortDropdown
+        selected={selected}
+        setSelected={setSelected}
+        setIsActive={setIsActive}
+        isActive={isActive}
+      />
     </div>
   );
 };
