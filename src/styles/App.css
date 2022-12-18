@@ -1,0 +1,155 @@
+@import url("../components/button/button.css");
+@import url("../components/activity/activity.css");
+@import url("../components/list-item/list-item.css");
+@import url("../components/modal/modal.css");
+
+:root {
+  --color-blue: #16abf8;
+  --color-red: #ed4c5c;
+  --color-yellow: #ffce31;
+  --color-green: #00a790;
+  --color-yellow: #ffce31;
+  --color-light-blue: #43c4e3;
+  --color-purple: #8942c1;
+  --color-black: #111111;
+  --color-light-black: #4a4a4a;
+  --color-gray: #888888;
+  --color-light-gray: #f4f4f4;
+  --color-white: #fff;
+  --color-border: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--color-light-gray);
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  width: clamp(90%, 90%, 1000px);
+}
+
+.priority-icon {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+
+.priority-icon.very-high {
+  background-color: var(--color-red);
+}
+.priority-icon.high {
+  background-color: var(--color-yellow);
+}
+.priority-icon.normal,
+.priority-icon.medium {
+  background-color: var(--color-green);
+}
+.priority-icon.low {
+  background-color: var(--color-blue);
+}
+.priority-icon.very-low {
+  background-color: var(--color-purple);
+}
+
+.header {
+  width: 100vw;
+  background-color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  height: 85px;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.todo-header {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.empty-item {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.empty-state {
+  max-width: 500px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.close-icon {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url(../assets/icon/close-icon.svg);
+  cursor: pointer;
+}
+
+.sort-icon {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background: url(../assets/icon/todo-sort-button.svg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.check-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url(../assets/icon/check-icon.svg);
+  background-size: cover;
+}
+
+.edit-icon {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(../assets/icon/edit-icon.svg);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.danger-icon {
+  display: block;
+  width: 72px;
+  height: 72px;
+  background: url(../assets/icon/danger-icon.svg);
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.info-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../assets/icon/info-icon.svg);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  filter: invert(73%) sepia(100%) saturate(1100%) hue-rotate(158deg)
+    brightness(91%) contrast(94%);
+}
+
+.text-bold {
+  font-weight: 600;
+}
+

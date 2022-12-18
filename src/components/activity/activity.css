@@ -1,0 +1,97 @@
+.activity-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.activity-card {
+  padding: 1rem;
+  background: var(--color-white);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 200px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.activity-title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer p {
+  color: var(--color-gray);
+}
+
+.trash-icon {
+  width: 20px;
+  height: 20px;
+  background: url(../../assets/icon/trash-icon.svg);
+  cursor: pointer;
+}
+
+.trash-icon:hover {
+  transform: scale(1.1);
+}
+
+.todo-wrapper {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-title {
+  display: flex;
+  align-items: center;
+}
+
+.todo-title h4 {
+  font-size: 1.5rem;
+  margin-left: 8px;
+}
+
+.todo-title .edit-icon {
+  margin-left: 20px;
+}
+
+.back-icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: url(../../assets/icon/back-icon.svg);
+  cursor: pointer;
+}
+
+.back-icon:hover {
+  transform: scale(1.1);
+}
+
+.todo-input {
+  margin-left: 1rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--color-black);
+  height: 1.5rem;
+  padding: 0.5rem 0;
+  background-color: transparent;
+  width: 400px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 780px) {
+  .activity-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
